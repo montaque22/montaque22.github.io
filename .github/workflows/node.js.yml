@@ -39,6 +39,9 @@ jobs:
     - run: npm test
     - name: Archive production artifacts
       uses: actions/upload-artifact@v3
+      with:
+        name: my-build
+        path: build
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
