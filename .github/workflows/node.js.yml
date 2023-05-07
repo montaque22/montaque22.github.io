@@ -45,7 +45,8 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
-        with: build
+        with:
+          folder: build
     
   # deploy:
   #   # Add a dependency to the build job
