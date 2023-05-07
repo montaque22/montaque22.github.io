@@ -1,5 +1,27 @@
-.App {
-  text-align: center;
+.app {
+
+  flex-wrap: wrap;
+
+  &__container{
+    display: flex;
+    padding: 25px;
+  }
+
+  &__header{
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 0;
+  }
+
+  &__left-nav{
+    width: 25%;
+    max-width: 300px;
+  }
+
+  &__right-nav {
+      width: 100%;
+      padding: 0 25px;
+  }
 }
 
 .App-logo {

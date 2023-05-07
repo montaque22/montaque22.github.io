@@ -1,28 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom'
+import { Home } from './pages/Home/home';
+import { STier } from './pages/stier';
+import './App.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline">
-        Hello world
-      </h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return (<div className='app'>
+    <header className='app__header bg-slate-50'>
+      <a href="/" className='uppercase text-xl font-sans'>Chaperone</a>
+    </header>
+
+    <div className='app__container'>
+      <ul className='app__left-nav rounded border border-slate-500'>
+        <li className='w-full '>
+          <Link to="/stier">S-Tier</Link>
+        </li>
+      </ul>
+  
+
+      <div className="app__right-nav">
+
+          <Routes>
+             
+          <Route path="/stier" element={<STier />} />
+          <Route path="/" element={<Home />}/>
+      
+          </Routes>
+
+      </div>
     </div>
+    
+  </div>
+    
   );
 }
 
