@@ -1,11 +1,11 @@
 import React from "react";
 import { Code } from "../Code/Code";
 
-interface Post {
+interface IPost {
   baseclass?: string;
   title: string;
 }
-export const Post = (props: React.PropsWithChildren<Post>) => {
+export const Post = (props: React.PropsWithChildren<IPost>) => {
   const { title, baseclass = "", children } = props;
 
   return (
@@ -17,7 +17,7 @@ export const Post = (props: React.PropsWithChildren<Post>) => {
   );
 };
 
-Post.body = (props: React.PropsWithChildren) => {
+Post.Body = (props: React.PropsWithChildren) => {
   return <p className="mb-10">{props.children}</p>;
 };
 
@@ -31,7 +31,7 @@ interface PostSection {
   image?: string;
   json?: object;
 }
-Post.section = (props: React.PropsWithChildren<PostSection>) => {
+Post.Section = (props: React.PropsWithChildren<PostSection>) => {
   const {
     title,
     summary = "",

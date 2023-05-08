@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/Home/home";
 import { STier } from "./pages/S-Tier/stier";
 import "./App.scss";

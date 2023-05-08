@@ -1,5 +1,4 @@
 import React from "react";
-import { Code } from "../../components/Code/Code";
 import { Post } from "../../components/Post/Post";
 import { goodnight } from "./goodnight";
 import bedAutomation from "../../images/beforeBed.png";
@@ -10,24 +9,24 @@ export const STier = () => {
       baseclass="stier"
       title="Avoid this lame trigger and use this one instead"
     >
-      <Post.body>
+      <Post.Body>
         Below are some automations that are triggered Good Night This is an
         iPhone specific automation and is triggered when the phone is plugged in
         at bedtime. This automation has 2 parts. The first is setting up the
         automation in Home Assistant using Node-Red. The second part is setting
         up the trigger on your iOS device.
-      </Post.body>
+      </Post.Body>
 
       <Youtube url="https://www.youtube.com/embed/uRzoJCkh3WE" />
 
-      <Post.section
+      <Post.Section
         title="In Home Assistant"
         summary={`To keep things simple, this result of this automation is to call a link-out node that would run a list of desired automations.`}
         image={bedAutomation}
         json={goodnight}
       />
 
-      <Post.section
+      <Post.Section
         title="iOS Device"
         summary={`The automation above is triggered via a webhook which we will run using an iPhone.
         The instructions below show how to set personal automation which triggers a webhook when the phone

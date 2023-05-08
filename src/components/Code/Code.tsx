@@ -5,10 +5,10 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialOceanic } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const MySwal = withReactContent(Swal);
-interface Code {
+interface ICode {
   json: object;
 }
-export const Code = (props: Code) => {
+export const Code = (props: ICode) => {
   const { json } = props;
 
   const copy = () => {
