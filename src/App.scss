@@ -9,13 +9,19 @@
 
   &__header{
     width: 100%;
-    padding: 25px;
+    padding: 15px;
     margin-bottom: 0;
   }
 
   &__left-nav{
     width: 25%;
     max-width: 300px;
+    li {
+      padding: 15px;
+      &:not(:last-child){
+        border-bottom: solid #1e293b 1px;
+      }
+    }
   }
 
   &__right-nav {
