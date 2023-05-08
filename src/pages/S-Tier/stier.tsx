@@ -34,50 +34,50 @@ export const STier = () => {
         instructions={[
           {
             text: (
-              <p>
+              <span>
                 Open the Shortcuts app and go to the <b>Automation</b> tab and
                 click the <b>+</b> button
-              </p>
+              </span>
             ),
           },
 
           {
             text: (
-              <p>
+              <span>
                 Tap <b>Create Personal Automation</b>
-              </p>
+              </span>
             ),
           },
           {
             text: (
-              <p>
+              <span>
                 Choose <b>Charger</b> ➡ <b>Is Connected</b> ➡ <b>Next</b>
-              </p>
+              </span>
             ),
           },
 
           {
             text: (
-              <p>
+              <span>
                 Add a new action and choose <b>Get Current Focus</b>
-              </p>
+              </span>
             ),
           },
           {
             text: (
-              <p>
+              <span>
                 Now choose the <b>If-statement</b> next and set it to say{" "}
                 <b>If Current Focus has any value</b> as the condition
-              </p>
+              </span>
             ),
           },
 
           {
             text: (
-              <p>
+              <span>
                 Set the action for this condition to be{" "}
                 <b>Get Contents of URL</b>
-              </p>
+              </span>
             ),
           },
         ]}

@@ -25,7 +25,7 @@ type PostInstructions = {
   text: string | JSX.Element;
 };
 interface PostSection {
-  title: string;
+  title?: string;
   summary?: string;
   instructions?: PostInstructions[];
   image?: string;
@@ -44,13 +44,9 @@ Post.Section = (props: React.PropsWithChildren<PostSection>) => {
   const renderInstructions = () => {
     if (instructions.length) {
       return (
-        <ul className="mb-10 px-10">
+        <ul>
           {instructions.map((instruction, idx) => {
-            return (
-              <li className="mb-6 flex" key={idx}>
-                <span className="mr-2 text-xl">⁍</span> {instruction.text}
-              </li>
-            );
+            return <li key={idx}>{instruction.text}</li>;
           })}
         </ul>
       );
@@ -69,7 +65,7 @@ Post.Section = (props: React.PropsWithChildren<PostSection>) => {
 
   return (
     <section className="mb-10">
-      <h3 className="text-3xl mb-2">{title}</h3>
+      {title && <h3 className="text-3xl mb-2">{title}</h3>}
 
       {summary && <p className="mb-6"> {summary}</p>}
 
