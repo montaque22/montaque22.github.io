@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/Home/home";
 import { STier } from "./pages/S-Tier/stier";
+import logo from "./images/Chaperone-light.png";
 import "./App.scss";
 import { AIMasterClass } from "./pages/AI-MasterClass/AIMasterClass";
 
@@ -15,11 +16,13 @@ function App() {
   return (
     <div className="app text-slate-100">
       <header className="app__header bg-slate-700">
-        <h1>
-          <a href="/" className="uppercase text-l font-sans font-extrabold">
-            Chaperone
-          </a>
-        </h1>
+        <a href="/" className="uppercase text-l font-sans font-extrabold">
+          <img
+            className="max-w-xs"
+            src={logo}
+            alt="image of logo. It says Technithusiast Chaperone."
+          />
+        </a>
       </header>
 
       <div className="app__container">

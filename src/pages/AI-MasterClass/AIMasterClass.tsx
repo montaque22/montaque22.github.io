@@ -59,11 +59,11 @@ export const AIMasterClass = () => {
       />
 
       <Post.Section
-        title="3. I discovered a clever workaround to run automation with GPT"
+        title="3. I discovered a clever workaround to run automations with GPT"
         summary={`Coming Soon`}
       />
       <Post.Section
-        title="4. 5 Powerful automations only GPT can run"
+        title="4. Five Powerful automations only GPT can run"
         summary={`Coming Soon`}
       />
     </Post>
