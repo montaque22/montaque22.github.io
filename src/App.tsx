@@ -7,7 +7,7 @@ import { AIMasterClass } from "./pages/AI-MasterClass/AIMasterClass";
 
 enum URLRoutes {
   Home = "/",
-  AI_MasterClass = "/ai-master-class",
+  AI_MasterClass = "ai-master-class",
   S_Tier = "stier",
 }
 
