@@ -1,8 +1,9 @@
 import React from "react";
 import { Post } from "../../components/Post/Post";
 import { Youtube } from "../../components/Youtube/Youtube";
-import { episodeOne } from "./nodes";
+import { episodeOne, episodeTwo } from "./nodes";
 import episodeOneImg from "../../images/AI-MasterClass-EP-1.png";
+import episodeTwoImg from "../../images/episodeTwo.png";
 
 export const AIMasterClass = () => {
   return (
@@ -47,7 +48,22 @@ export const AIMasterClass = () => {
       />
 
       <Post.Section
-        title="2. Integrate GPT-3 into Home Assistant"
+        title="2. I've never seen GPT connected to Home Assistant this way..."
+        summary={`There are several integrations out there that allows you to utilize GPT in Home
+        Assistant but i've never seen people use it used in an automation. At the time of writing, the OpenAI integration only
+        allows you talk to GPT on a dashboard. But my version HITS DIFFERENT. I believe it is where Home Assistant will go after a few month of testing and development
+        and it's where I believe the smart home community expects it to go. At the end of this lesson you will be able to use GPT in an automation flow and get answers
+        about your smart home as well as any other general knowledge GPT has.`}
+        json={episodeTwo}
+        image={episodeTwoImg}
+      />
+
+      <Post.Section
+        title="3. I discovered a clever workaround to run automation with GPT"
+        summary={`Coming Soon`}
+      />
+      <Post.Section
+        title="4. 5 Powerful automations only GPT can run"
         summary={`Coming Soon`}
       />
     </Post>
