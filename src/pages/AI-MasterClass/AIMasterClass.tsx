@@ -44,7 +44,7 @@ export const AIMasterClass = () => {
         image={episodeOneImg}
       />
       <Post.Section
-        title="2. I've never seen GPT connected to Home Assistant this way..."
+        title="2. Add GPT to Home Assistant in 10 Minutes! Make it EPIC in 10 more!"
         summary={`There are several integrations out there that allows you to utilize GPT in Home
         Assistant but i've never seen people use it used in an automation. At the time of writing, the OpenAI integration only
         allows you talk to GPT on a dashboard. But my version HITS DIFFERENT. I believe it is where Home Assistant will go after a few month of testing and development
