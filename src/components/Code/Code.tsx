@@ -19,7 +19,12 @@ export const Code = (props: ICode) => {
 
   return (
     <div className="my-5">
-      <div className="flex justify-end p-2">
+      <div className="flex justify-between p-2 items-center">
+        <p className="text-sm italic">
+          <b>DISCLAIMER:</b> By copying this data you acknowledge the risks of
+          using code from the internet and are acting at your own discretion. I
+          am not responsible for any damages.
+        </p>
         <button
           onClick={copy}
           className="bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 p-2 rounded"

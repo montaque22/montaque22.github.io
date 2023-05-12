@@ -17,7 +17,6 @@ export const AIMasterClass = () => {
         gives your AI bot the ability to make changes such as toggling lights
         and other devices.
       </Post.Body>
-
       <Post.Body>
         GPT-3 makes it very easy to create an AI chatbot however there are some
         challenges we need to overcome to get it to work in a meaningful way
@@ -29,7 +28,6 @@ export const AIMasterClass = () => {
         <li>Enable IA Chatbot to run simple commands</li>
         <li>Enable IA Chatbot to run complex commands</li>
       </ul>
-
       <Post.Section
         title="1. Integrating Telegram into Home Assistant"
         summary={`In the video below, I explain how create a telegram bot and connect it to home assistant.
@@ -37,7 +35,6 @@ export const AIMasterClass = () => {
         in creating a personal AI chatbot capable of controlling your smart home.`}
       />
       <Youtube url="https://www.youtube.com/embed/wl8ZWBjpBoA" />
-
       <Post.Section
         summary={`Once you you add Telegram to your config yaml file, you should have new services available to you
         inside node-reds Call-Service node. If you followed the video you should have a similar setup of nodes you see
@@ -46,7 +43,6 @@ export const AIMasterClass = () => {
         json={episodeOne}
         image={episodeOneImg}
       />
-
       <Post.Section
         title="2. I've never seen GPT connected to Home Assistant this way..."
         summary={`There are several integrations out there that allows you to utilize GPT in Home
@@ -54,6 +50,17 @@ export const AIMasterClass = () => {
         allows you talk to GPT on a dashboard. But my version HITS DIFFERENT. I believe it is where Home Assistant will go after a few month of testing and development
         and it's where I believe the smart home community expects it to go. At the end of this lesson you will be able to use GPT in an automation flow and get answers
         about your smart home as well as any other general knowledge GPT has.`}
+      />
+      <Youtube url="https://www.youtube.com/embed/u_rA2y2N_lo" />
+
+      <Post.Section
+        summary={`When a message comes in from Telegram the next node sets the a property called
+              "prompt" to the text sent from telegram. the "getEntities" node fetches all the entities in
+              your home assistant environment and the "Filter for specific entities" will search for
+              any entity with an id that starts with "light." The following node updates the "prompt" text to 
+              with information about your smart home and the question you want to ask GPT. The "OpenAI" node
+              will send the message and return an answer which will be cleaned up and formatted byt the
+              "Sanitize response" node. Lastly the message from OpenAI is sent back to Telegram.`}
         json={episodeTwo}
         image={episodeTwoImg}
       />

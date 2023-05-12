@@ -80,6 +80,39 @@ export const STier = () => {
               </span>
             ),
           },
+          {
+            text: (
+              <span>
+                Add the url to your webhook. It will look like:
+                <b>[your-home-assistant0url/api/webhook/iphoneCharging]</b>
+              </span>
+            ),
+          },
+          {
+            text: (
+              <span>
+                Change the Method to <b>POST</b>
+              </span>
+            ),
+          },
+
+          {
+            text: (
+              <span>
+                Request Body is a JSON with the key of <b>isCharging</b> equal
+                to <b>True</b>
+              </span>
+            ),
+          },
+          {
+            text: (
+              <span>
+                Now if you plug in your phone while your phone is in sleep mode
+                and its between 9pm and 3am, this will trigger in home assistant
+                where you can start any automation you like.
+              </span>
+            ),
+          },
         ]}
       />
     </Post>
