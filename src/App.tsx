@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/Home/home";
 import { STier } from "./pages/S-Tier/stier";
-import logo from "./images/Chaperone-light.png";
+import logo from "./images/Chaperone-splash.png";
 import "./App.scss";
 import { AIMasterClass } from "./pages/AI-MasterClass/AIMasterClass";
 
