@@ -27,3 +27,7 @@ ul li::before {
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+b {
+  color: #ec4899;
+}
