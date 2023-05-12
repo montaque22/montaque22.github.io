@@ -20,7 +20,7 @@ function App() {
           <img
             className="max-w-xs"
             src={logo}
-            alt="image of logo. It says Technithusiast Chaperone."
+            alt="Technithusiast Chaperone."
           />
         </a>
       </header>
