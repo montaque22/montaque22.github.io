@@ -30,10 +30,15 @@ function App() {
           <h3 className="text-lg mb-2">Navigation</h3>
           <ul className="rounded border border-slate-600 bg-slate-700">
             <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link to={URLRoutes.AI_MasterClass}>AI Master Class</Link>
+              <Link
+                to={URLRoutes.AI_MasterClass}
+                className="hover:text-rose-500"
+              >
+                AI Master Class Series
+              </Link>
             </li>
             <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link to={URLRoutes.S_Tier}>
+              <Link to={URLRoutes.S_Tier} className="hover:text-rose-500">
                 Avoid this lame trigger and use this one instead
               </Link>
             </li>

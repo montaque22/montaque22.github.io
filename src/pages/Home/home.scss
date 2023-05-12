@@ -1,3 +1,32 @@
-.home{
+.home {
+  &__disabled {
+    .code {
+      position: relative;
 
+      &::after {
+        content: "EXAMPLE ONLY";
+        font-size: 9rem;
+        position: absolute;
+        white-space: nowrap;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0rem;
+        height: 10rem;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        opacity: 0.25;
+        transform: rotate(-15deg);
+      }
+    }
+    button {
+      pointer-events: none;
+      opacity: 0.5;
+      &::hover {
+        cursor: not-allowed;
+      }
+    }
+  }
 }

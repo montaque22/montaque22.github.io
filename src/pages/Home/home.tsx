@@ -6,8 +6,7 @@ import "./home.scss";
 
 export const Home = () => {
   return (
-    <Post baseclass="home" title="Welcome to Chaperone!">
-      <p></p>
+    <Post baseclass="home home__disabled" title="Welcome to Chaperone!">
       <Post.Section
         summary={` This companion guide will show you interesting, sometimes complex,
         node-red configurations that can enhance your home assistant
