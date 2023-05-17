@@ -1,9 +1,10 @@
 import React from "react";
 import { Post } from "../../components/Post/Post";
 import { Youtube } from "../../components/Youtube/Youtube";
-import { episodeOne, episodeTwo } from "./nodes";
+import { episodeOne, episodeThree, episodeTwo } from "./nodes";
 import episodeOneImg from "../../images/AI-MasterClass-EP-1.png";
 import episodeTwoImg from "../../images/episodeTwo.png";
+import episodeThreeImg from "../../images/episodeThree.png";
 
 export const AIMasterClass = () => {
   return (
@@ -51,7 +52,7 @@ export const AIMasterClass = () => {
         and it's where I believe the smart home community expects it to go. At the end of this lesson you will be able to use GPT in an automation flow and get answers
         about your smart home as well as any other general knowledge GPT has.`}
       />
-      <Youtube url="https://www.youtube.com/embed/u_rA2y2N_lo" />
+      <Youtube url="https://www.youtube.com/embed/1tq9UbLfDtY" />
 
       <Post.Section
         summary={`When a message comes in from Telegram the next node sets the a property called
@@ -66,12 +67,36 @@ export const AIMasterClass = () => {
       />
 
       <Post.Section
-        title="3. I discovered a clever workaround to run automations with GPT"
-        summary={`Coming Soon`}
+        title="3. Get GPT to Trigger Your Automations!"
+        summary={`After some digging, I think I'm the first person to figure out how to get GPT to control your
+        Home Automations without actually having physical control or connection to your system.
+        This is experimental and I am certain that in time, a better integration will be available to enable a more 
+        seamless and tightly coupled experience. Until that time, the content below shows how you can use your 
+        AI Chatbot to control your smart home with GPT-3's help.`}
+        timeGate={new Date("May 24, 2023 8:30 AM")}
       />
+
+      <Youtube
+        url="https://www.youtube.com/embed/0x2g4V022CM"
+        timeGate={new Date("May 24, 2023 8:30 AM")}
+      />
+
+      <Post.Section
+        summary={`GPT is able to control our automations by providing the entities and the action to perform on those
+        entities based on the context give. We provide OpenAI relevant Devices and actions and ask it to return a JSON
+        Object that satisfies the critias. This mean that we do not need to provide any new code or alternate way of saying
+        "Turn of the lights" as GPT is able to infer what we want. It should be noted that this implementation 
+        takes 2 trips to OpenAI's server to complete any request. Currently,
+        there is a contest to see if this can be reduced to a single succinct request.`}
+        timeGate={new Date("May 24, 2023 8:30 AM")}
+        json={episodeThree}
+        image={episodeThreeImg}
+      />
+
       <Post.Section
         title="4. Five Powerful automations only GPT can run"
         summary={`Coming Soon`}
+        timeGate={new Date("May 31, 2023")}
       />
     </Post>
   );

@@ -30,6 +30,7 @@ interface PostSection {
   instructions?: PostInstructions[];
   image?: string;
   json?: object;
+  timeGate?: Date;
 }
 Post.Section = (props: React.PropsWithChildren<PostSection>) => {
   const {
@@ -38,8 +39,11 @@ Post.Section = (props: React.PropsWithChildren<PostSection>) => {
     instructions = [],
     image = "",
     json,
+    timeGate,
     children,
   } = props;
+  const now = new Date();
+  const shouldHidePost = timeGate ? now < timeGate : false;
 
   const renderInstructions = () => {
     if (instructions.length) {
@@ -62,6 +66,10 @@ Post.Section = (props: React.PropsWithChildren<PostSection>) => {
       );
     }
   };
+
+  if (shouldHidePost) {
+    return null;
+  }
 
   return (
     <section className="mb-10">

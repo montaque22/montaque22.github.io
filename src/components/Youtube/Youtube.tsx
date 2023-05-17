@@ -1,7 +1,10 @@
 import React from "react";
 
-export const Youtube = (props: { url: string }) => {
-  const { url } = props;
+export const Youtube = (props: { url: string; timeGate?: Date }) => {
+  const { url, timeGate } = props;
+  const now = new Date();
+  const shouldHidePost = timeGate ? now < timeGate : false;
+
   const renderYoutubeVideo = () => {
     if (url) {
       return (
@@ -19,6 +22,10 @@ export const Youtube = (props: { url: string }) => {
       );
     }
   };
+
+  if (shouldHidePost) {
+    return null;
+  }
 
   return renderYoutubeVideo() ?? null;
 };
