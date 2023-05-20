@@ -42,10 +42,10 @@
 
   &__right-nav {
     width: 100%;
-    max-width: 75%;
     padding: 0 25px;
     @media (min-width: 768px) {
-      max-width: 100%;
+      max-width: 75%;
+      min-width: calc(100% - 360px);
     }
   }
 
