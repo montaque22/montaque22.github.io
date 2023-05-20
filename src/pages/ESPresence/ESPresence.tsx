@@ -17,7 +17,7 @@ export const ESPresence = () => {
         image={espresenceMbLight}
       />
       <Post.Section
-        title="Prerequisites"
+        subTitle="Prerequisites"
         summary={`These automations require the following additional equipment and software`}
         instructions={[
           {
@@ -36,7 +36,7 @@ export const ESPresence = () => {
         ]}
       />
       <Post.Section
-        title="How it works"
+        subTitle="How it works"
         instructions={[
           {
             text: (

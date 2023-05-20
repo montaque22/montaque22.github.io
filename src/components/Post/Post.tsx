@@ -34,6 +34,7 @@ type PostInstructions = {
   text: string | JSX.Element;
 };
 interface PostSection {
+  subTitle?: string;
   title?: string;
   summary?: string;
   instructions?: PostInstructions[];
@@ -44,6 +45,7 @@ interface PostSection {
 Post.Section = (props: React.PropsWithChildren<PostSection>) => {
   const {
     title,
+    subTitle = "",
     summary = "",
     instructions = [],
     image = "",
@@ -87,6 +89,8 @@ Post.Section = (props: React.PropsWithChildren<PostSection>) => {
   return (
     <section className="mb-10">
       {title && <h3 className="text-3xl mb-2">{title}</h3>}
+
+      {subTitle && <h4 className="text-xl mb-2 font-bold">{subTitle}</h4>}
 
       {summary && <p className="mb-6"> {summary}</p>}
 
