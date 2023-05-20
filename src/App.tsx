@@ -6,11 +6,13 @@ import classnames from "classnames";
 import logo from "./images/Chaperone-splash.png";
 import "./App.scss";
 import { AIMasterClass } from "./pages/AI-MasterClass/AIMasterClass";
+import { ESPresence } from "./pages/ESPresence/ESPresence";
 
 enum URLRoutes {
   Home = "/",
   AI_MasterClass = "ai-master-class",
   S_Tier = "stier",
+  ESPresence = "espresence",
 }
 
 // Create a condition that targets viewports at least 768px wide
@@ -69,6 +71,11 @@ const App = () => {
                 Avoid this lame trigger and use this one instead
               </Link>
             </li>
+            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
+              <Link to={URLRoutes.ESPresence} className="hover:text-rose-500">
+                ESPresence Automations
+              </Link>
+            </li>
             {/* <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
               <Link to="/webhook-master-class">Webhook Master Class</Link>
             </li> */}
@@ -84,6 +91,7 @@ const App = () => {
               />
               <Route path={URLRoutes.S_Tier} element={<STier />} />
               <Route path={URLRoutes.Home} element={<Home />} />
+              <Route path={URLRoutes.ESPresence} element={<ESPresence />} />
             </Routes>
           </div>
         </div>

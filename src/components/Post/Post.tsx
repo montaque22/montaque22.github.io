@@ -12,6 +12,15 @@ export const Post = (props: React.PropsWithChildren<IPost>) => {
     <div className={baseclass}>
       <h2 className="text-5xl font-bold mb-2 max-w-3xl">{title}</h2>
 
+      <em className="mb-6 block">
+        <a
+          href="https://www.buymeacoffee.com/mmontaque"
+          className="text-pink-500"
+        >
+          Want to show support?
+        </a>
+      </em>
+
       <div className="post__body">{children}</div>
     </div>
   );
@@ -50,7 +59,11 @@ Post.Section = (props: React.PropsWithChildren<PostSection>) => {
       return (
         <ul>
           {instructions.map((instruction, idx) => {
-            return <li key={idx}>{instruction.text}</li>;
+            return (
+              <li className="post__instructions" key={idx}>
+                {instruction.text}
+              </li>
+            );
           })}
         </ul>
       );
