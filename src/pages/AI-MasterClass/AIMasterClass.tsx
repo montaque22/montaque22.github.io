@@ -84,7 +84,7 @@ export const AIMasterClass = () => {
       <Post.Section
         summary={`GPT is able to control our automations by providing the entities and the action to perform on those
         entities based on the context give. We provide OpenAI relevant Devices and actions and ask it to return a JSON
-        Object that satisfies the critias. This mean that we do not need to provide any new code or alternate way of saying
+        Object that satisfies the criteria. This mean that we do not need to provide any new code or alternate way of saying
         "Turn of the lights" as GPT is able to infer what we want. It should be noted that this implementation 
         takes 2 trips to OpenAI's server to complete any request. Currently,
         there is a contest to see if this can be reduced to a single succinct request.`}
