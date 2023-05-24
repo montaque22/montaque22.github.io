@@ -77,7 +77,7 @@ export const AIMasterClass = () => {
       />
 
       <Youtube
-        url="https://www.youtube.com/embed/0x2g4V022CM"
+        url="https://www.youtube.com/embed/uFCnuJ5x6u4"
         timeGate={new Date("May 24, 2023 8:30 AM")}
       />
 
