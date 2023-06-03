@@ -96,7 +96,7 @@ export const AIMasterClass = () => {
       <Post.Section
         title="4. Five Powerful automations only GPT can run"
         summary={`Coming Soon`}
-        timeGate={new Date("May 31, 2023")}
+        timeGate={new Date("June 17, 2023")}
       />
     </Post>
   );
