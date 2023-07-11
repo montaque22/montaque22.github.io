@@ -34,6 +34,7 @@ export const ChildGuardAutomation = () => {
               <a
                 href="https://www.amazon.com/Aqara-Configurable-Detection-Automations-Compatible/dp/B0B9XZ1D51/ref=sr_1_2?crid=3J0NA35WQ9KGC&amp;keywords=aqara&amp;qid=1688969341&amp;sprefix=aqar%252Caps%252C273&amp;sr=8-2&_encoding=UTF8&tag=technithusias-20&linkCode=ur2&linkId=c50070844aa2652675c717e382c98b71&camp=1789&creative=9325"
                 target="_blank"
+                rel="noreferrer"
               >
                 Aqara Motion Sensor
               </a>
@@ -45,6 +46,7 @@ export const ChildGuardAutomation = () => {
               <a
                 href="https://www.amazon.com/Aqara-WXKG11LM-Switch-Wireless-Remote/dp/B07D19YXND/ref=sr_1_3?crid=3J0NA35WQ9KGC&amp;keywords=aqara&amp;qid=1688969341&amp;sprefix=aqar%252Caps%252C273&amp;sr=8-3&_encoding=UTF8&tag=technithusias-20&linkCode=ur2&linkId=ff31b8de21853bd57189e24f100af7ad&camp=1789&creative=9325"
                 target="_blank"
+                rel="noreferrer"
               >
                 Aqara Button (Mini Switch)
               </a>
@@ -55,6 +57,7 @@ export const ChildGuardAutomation = () => {
               <a
                 href="https://www.amazon.com/smart-light-bulbs-alexa-wifi/dp/B08TB6VXFL/ref=sr_1_7?keywords=tp+link+kasa+light+bulb&amp;qid=1689010248&amp;sprefix=tp+link+bul%252Caps%252C266&amp;sr=8-7&_encoding=UTF8&tag=technithusias-20&linkCode=ur2&linkId=04711e287a8f41f804de869f706b4897&camp=1789&creative=9325"
                 target="_blank"
+                rel="noreferrer"
               >
                 TP-Link Smart Bulbs
               </a>
@@ -65,6 +68,7 @@ export const ChildGuardAutomation = () => {
               <a
                 href="https://store.google.com/product/google_nest_mini"
                 target="_blank"
+                rel="noreferrer"
               >
                 Google Nest Mini / Google{" "}
               </a>
