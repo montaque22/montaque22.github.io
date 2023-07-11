@@ -20,7 +20,7 @@ export const ChildGuardAutomation = () => {
         automation.
       </Post.Body>
 
-      <Youtube url="https://youtu.be/nsZzunK1tlo" />
+      <Youtube url="https://www.youtube.com/embed/nsZzunK1tlo" />
 
       <Post.Section
         title="Baby Escape Detection Automation"
