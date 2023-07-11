@@ -11,13 +11,14 @@ export const ChildGuardAutomation = () => {
     >
       <Post.Body>
         Last week, we had a scary moment as our child unexpectedly climbed out
-        of her crib. Normally, we wouldn't care but since none of us in the
-        house expected it, she was not only able to wander around the house but
-        she also went outside for several minutes with none of us aware!
-        Needless to say, she is okay, but this new development urged us to
-        expand our smart-home to allow her the freedom of mobility without
-        compromising security. My family agreed on this following smarthome
-        automation.
+        of her crib. Normally, this wouldn't bother us since we're watching her
+        and her environment is safe and reasonable for her to explore but since
+        none of us in the house expected it, she was not only able to wander
+        around the house but she also went outside for several minutes. And with
+        NONE OF US KNEW! Needless to say, she is okay, but this new development
+        urged us to expand our smart-home to allow her the freedom of mobility
+        without compromising security. My family agreed on this following
+        smarthome automation.
       </Post.Body>
 
       <Youtube url="https://www.youtube.com/embed/nsZzunK1tlo" />
