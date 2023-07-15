@@ -1,10 +1,25 @@
 import { Post } from "../../components/Post/Post";
-import { lightAutomation } from "./nodes";
+import { announceToPerson, lightAutomation, whereAmI } from "./nodes";
 import espresenceMbLight from "../../images/espresence-mb-light.png";
+import whereAmIImage from "../../images/whereAmI.png";
+import announceToPersonImage from "../../images/announceToPerson.png";
+import { Youtube } from "../../components/Youtube/Youtube";
 
 export const ESPresence = () => {
   return (
     <Post title="ESPresence Automations">
+      <Post.Section
+        title="What is ESPresence?"
+        summary={`On this page you will see all the automations I created around room-level presence detection. Being able to track individuals at a room level
+        requires supported bluetooth devices to be present on the person which can be annoying but the trade off is a home automation experience that is tailored specific
+        to the individual. Check out the video below where I give an overview of my thoughts with ESPresence.`}
+      />
+
+      <div className="flex flex-row flex-wrap">
+        <Youtube url="https://www.youtube.com/embed/qWbAmZ-PWmU" />
+        <Youtube url="https://www.youtube.com/embed/ud8WOaBYbOA" />
+      </div>
+
       <Post.Section
         title="Room Occupancy"
         summary={`The following automation uses both the ESPresence and Ring Motion sensor
@@ -131,6 +146,28 @@ export const ESPresence = () => {
         ]}
       />
       <Post.Section json={lightAutomation} />
+
+      <Post.Section
+        title="Where am I"
+        summary={`This simple automation takes advantage of ESPresence awareness of tracked devices to let you know
+        know which room it is in. This requires a helper switch which could be synced to Google Home allowing you
+         to even ask google to activate this automation. This automation does require a a subflow called "Where is person".
+         This subflow is responsible for reading searching for the specific presence device and returning a message stating where the device
+         is located. Something to note: The ESPresence devices have a consistent Entity naming schema. "sensor.<firstname>presence". This
+         format makes it easier to make the automations reusable for different people. You don't need to follow this format but simply keep it in mind
+         when modifying the automation.`}
+        image={whereAmIImage}
+      />
+      <Post.Section json={whereAmI} />
+      <Post.Section
+        title="Announce to Person"
+        summary={`This is more of a subflow which can be reused many times depending on the circumstance. Announce to person takes
+        a message and person as an input and will first look for the room the device is located in and then looks for the speakers in the same room.
+        This automation also takes advantage of the particular naming schema where room name is in the name of the speakers. For example: "media_player.<ROOM>.display".
+        This automation has been evolved over time to also include the ability to send SMS to devices and send a copy of message to Ke, the AI chatbot I Created to run my smart home.`}
+        image={announceToPersonImage}
+      />
+      <Post.Section json={announceToPerson} />
     </Post>
   );
 };

@@ -8,7 +8,7 @@ export const Youtube = (props: { url: string; timeGate?: Date }) => {
   const renderYoutubeVideo = () => {
     if (url) {
       return (
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center m-10">
           <iframe
             width="560"
             height="315"

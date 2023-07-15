@@ -1,7 +1,7 @@
 import React from "react";
 import { Post } from "../../components/Post/Post";
 import { Youtube } from "../../components/Youtube/Youtube";
-import { context, episodeOne, episodeThree, episodeTwo } from "./nodes";
+import { episodeOne, episodeThree, episodeTwo } from "./nodes";
 import episodeOneImg from "../../images/AI-MasterClass-EP-1.png";
 import episodeTwoImg from "../../images/episodeTwo.png";
 import episodeThreeImg from "../../images/episodeThree.png";
