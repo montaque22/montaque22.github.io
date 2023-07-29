@@ -1,5 +1,12 @@
 import { Post } from "../../components/Post/Post";
-import { announceToPerson, lightAutomation, whereAmI } from "./nodes";
+import {
+  announceToPerson,
+  lightAutomation,
+  whereAmI,
+  isInRoom,
+  isSomeoneHome,
+  whereIsPerson,
+} from "./nodes";
 import espresenceMbLight from "../../images/espresence-mb-light.png";
 import whereAmIImage from "../../images/whereAmI.png";
 import announceToPersonImage from "../../images/announceToPerson.png";
@@ -159,13 +166,39 @@ export const ESPresence = () => {
         image={whereAmIImage}
       />
       <Post.Section json={whereAmI} />
+
       <Post.Section
-        title="Announce to Person"
+        title="Subflow Automations"
+        summary={`A Subflow is a collection of nodes that are combined into a
+      single node. Subflows are used to reduce the complexity of automations and are a great way of encapsulating
+      repeat logic. Below are ESPresence subflows which can be used to augment your existing automations by taking advanage
+      of knowing who is in the room.`}
+      />
+
+      <Post.Section
+        subTitle="Where is Person"
+        summary={`You can choose the person you want to track and the node return which room the given person is located`}
+      />
+      <Post.Section json={whereIsPerson} />
+
+      <Post.Section
+        subTitle="Is In Room"
+        summary={`This node informs you if a person is in the specified room.`}
+      />
+      <Post.Section json={isInRoom} />
+
+      <Post.Section
+        subTitle="Is Someone Home"
+        summary={`This is a generic ESPresence automation that doesn't really care who is home. It only cares that someone is home.`}
+      />
+      <Post.Section json={isSomeoneHome} />
+
+      <Post.Section
+        subTitle="Announce to Person"
         summary={`This is more of a subflow which can be reused many times depending on the circumstance. Announce to person takes
         a message and person as an input and will first look for the room the device is located in and then looks for the speakers in the same room.
         This automation also takes advantage of the particular naming schema where room name is in the name of the speakers. For example: "media_player.<ROOM>.display".
         This automation has been evolved over time to also include the ability to send SMS to devices and send a copy of message to Ke, the AI chatbot I Created to run my smart home.`}
-        image={announceToPersonImage}
       />
       <Post.Section json={announceToPerson} />
     </Post>
