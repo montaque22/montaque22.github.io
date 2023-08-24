@@ -53,6 +53,17 @@ export const AIMasterClass = () => {
         about your smart home as well as any other general knowledge GPT has.`}
       />
       <Youtube url="https://www.youtube.com/embed/1tq9UbLfDtY" />
+
+      <Post.Body>
+        <b>NOTICE:</b> Many of you started reporting that the OpenAI Node is
+        failing. This is because OpenAI has deprecated the version that I
+        referenced. Stuff like this happen all the time when working with code.
+        You will need to go to the OpenAI developer site, navigate to the
+        Playground, Click View Code and update the node to look similar to the
+        Node.JS example they provide. I will create a video teaching you how to
+        figure this out for yourself as this will most-likely happen again.
+      </Post.Body>
+
       <Post.Section
         summary={`When a message comes in from Telegram the next node sets the a property called
               "prompt" to the text sent from telegram. the "getEntities" node fetches all the entities in
@@ -77,6 +88,17 @@ export const AIMasterClass = () => {
         url="https://www.youtube.com/embed/uFCnuJ5x6u4"
         timeGate={new Date("May 24, 2023 8:30 AM")}
       />
+
+      <Post.Body>
+        <b>NOTICE:</b> Many of you started reporting that the OpenAI Node is
+        failing. This is because OpenAI has deprecated the version that I
+        referenced. Stuff like this happen all the time when working with code.
+        You will need to go to the OpenAI developer site, navigate to the
+        Playground, Click View Code and update the node to look similar to the
+        Node.JS example they provide. I will create a video teaching you how to
+        figure this out for yourself as this will most-likely happen again.
+      </Post.Body>
+
       <Post.Section
         summary={`GPT is able to control our automations by providing the entities and the action to perform on those
         entities based on the context give. We provide OpenAI relevant Devices and actions and ask it to return a JSON
@@ -88,12 +110,6 @@ export const AIMasterClass = () => {
         json={episodeThree}
         image={episodeThreeImg}
       />
-
-      {/* <Post.Section
-        title="4. GPT took over my home!"
-        summary={`Coming Soon`}
-        timeGate={new Date("June 17, 2023")}
-      /> */}
     </Post>
   );
 };
