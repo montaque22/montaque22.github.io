@@ -29,6 +29,13 @@ export const AIMasterClass = () => {
         <li>Enable IA Chatbot to run simple commands</li>
         <li>Enable IA Chatbot to run complex commands</li>
       </ul>
+      <p>
+        <b>
+          NOTE: The OpenAI node can go out of date and cause errors since OpenAI
+          is experimental and can deprecate their API. If you run into errors
+          check their API documentation and update this code accordingly
+        </b>
+      </p>
       <Post.Section
         title="1. Integrating Telegram into Home Assistant"
         summary={`In the video below, I explain how create a telegram bot and connect it to home assistant.
