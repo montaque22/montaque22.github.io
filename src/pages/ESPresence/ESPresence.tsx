@@ -1,8 +1,18 @@
 import { Post } from "../../components/Post/Post";
-import { announceToPerson, lightAutomation, whereAmI } from "./nodes";
+import {
+  announceToPerson,
+  lightAutomation,
+  whereAmI,
+  isInRoom,
+  isSomeoneHome,
+  whereIsPerson,
+} from "./nodes";
 import espresenceMbLight from "../../images/espresence-mb-light.png";
 import whereAmIImage from "../../images/whereAmI.png";
 import announceToPersonImage from "../../images/announceToPerson.png";
+import isInRoomImg from "../../images/isInRoom.png";
+import whereIsPersonImg from "../../images/whereIsPerson.png";
+import isSomeoneHomeImg from "../../images/someoneIsHome.png";
 import { Youtube } from "../../components/Youtube/Youtube";
 
 export const ESPresence = () => {
@@ -159,8 +169,38 @@ export const ESPresence = () => {
         image={whereAmIImage}
       />
       <Post.Section json={whereAmI} />
+
       <Post.Section
-        title="Announce to Person"
+        title="Subflow Automations"
+        summary={`A Subflow is a collection of nodes that are combined into a
+      single node. Subflows are used to reduce the complexity of automations and are a great way of encapsulating
+      repeat logic. Below are ESPresence subflows which can be used to augment your existing automations by taking advanage
+      of knowing who is in the room.`}
+      />
+
+      <Post.Section
+        subTitle="Where is Person"
+        summary={`You can choose the person you want to track and the node return which room the given person is located`}
+        image={whereIsPersonImg}
+      />
+      <Post.Section json={whereIsPerson} />
+
+      <Post.Section
+        subTitle="Is In Room"
+        summary={`This node informs you if a person is in the specified room.`}
+        image={isInRoomImg}
+      />
+      <Post.Section json={isInRoom} />
+
+      <Post.Section
+        subTitle="Is Someone Home"
+        summary={`This is a generic ESPresence automation that doesn't really care who is home. It only cares that someone is home.`}
+        image={isSomeoneHomeImg}
+      />
+      <Post.Section json={isSomeoneHome} />
+
+      <Post.Section
+        subTitle="Announce to Person"
         summary={`This is more of a subflow which can be reused many times depending on the circumstance. Announce to person takes
         a message and person as an input and will first look for the room the device is located in and then looks for the speakers in the same room.
         This automation also takes advantage of the particular naming schema where room name is in the name of the speakers. For example: "media_player.<ROOM>.display".
