@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Home } from "./pages/Home/home";
 import { STier } from "./pages/S-Tier/stier";
-import classnames from "classnames";
-import logo from "./images/Chaperone-splash.png";
-import "./App.scss";
 import { AIMasterClass } from "./pages/AI-MasterClass/AIMasterClass";
 import { ESPresence } from "./pages/ESPresence/ESPresence";
 import { ChildGuardAutomation } from "./pages/ChildGuard/childGuard";
+import { AIIntent } from "./pages/AI-Intent/aiIntent";
+import { GlobalContext } from "./pages/GlobalContext/globalContext";
+import classnames from "classnames";
+import logo from "./images/Chaperone-splash.png";
+import "./App.scss";
 
 enum URLRoutes {
   Home = "/",
@@ -15,6 +17,8 @@ enum URLRoutes {
   S_Tier = "stier",
   ESPresence = "espresence",
   ChildGuard = "childGuard",
+  GlobalContext = "globalContext",
+  AI_Intent = "aiIntent",
 }
 
 // Create a condition that targets viewports at least 768px wide
@@ -83,6 +87,19 @@ const App = () => {
                 Child Guard Automation
               </Link>
             </li>
+            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
+              <Link to={URLRoutes.AI_Intent} className="hover:text-rose-500">
+                AI Intent Plugin
+              </Link>
+            </li>
+            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
+              <Link
+                to={URLRoutes.GlobalContext}
+                className="hover:text-rose-500"
+              >
+                Global Context
+              </Link>
+            </li>
             {/* <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
               <Link to="/webhook-master-class">Webhook Master Class</Link>
             </li> */}
@@ -99,6 +116,11 @@ const App = () => {
               <Route path={URLRoutes.S_Tier} element={<STier />} />
               <Route path={URLRoutes.Home} element={<Home />} />
               <Route path={URLRoutes.ESPresence} element={<ESPresence />} />
+              <Route
+                path={URLRoutes.GlobalContext}
+                element={<GlobalContext />}
+              />
+              <Route path={URLRoutes.AI_Intent} element={<AIIntent />} />
               <Route
                 path={URLRoutes.ChildGuard}
                 element={<ChildGuardAutomation />}

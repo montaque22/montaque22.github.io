@@ -17,7 +17,7 @@ export const Post = (props: React.PropsWithChildren<IPost>) => {
           href="https://www.buymeacoffee.com/mmontaque"
           className="text-pink-500"
         >
-          Want to show support?
+          Buy me a coffee ☕️
         </a>
       </em>
 
