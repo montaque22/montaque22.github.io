@@ -7,6 +7,7 @@ import { ESPresence } from "./pages/ESPresence/ESPresence";
 import { ChildGuardAutomation } from "./pages/ChildGuard/childGuard";
 import { AIIntent } from "./pages/AI-Intent/aiIntent";
 import { GlobalContext } from "./pages/GlobalContext/globalContext";
+import { BatteryStatus } from "./pages/BatteryStatus/batteryStatus";
 import classnames from "classnames";
 import logo from "./images/Chaperone-splash.png";
 import "./App.scss";
@@ -19,6 +20,7 @@ enum URLRoutes {
   ChildGuard = "childGuard",
   GlobalContext = "globalContext",
   AI_Intent = "aiIntent",
+  Battery_Status = "batteryStatus",
 }
 
 // Create a condition that targets viewports at least 768px wide
@@ -100,6 +102,14 @@ const App = () => {
                 Global Context
               </Link>
             </li>
+            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
+              <Link
+                to={URLRoutes.Battery_Status}
+                className="hover:text-rose-500"
+              >
+                Battery Status
+              </Link>
+            </li>
             {/* <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
               <Link to="/webhook-master-class">Webhook Master Class</Link>
             </li> */}
@@ -116,6 +126,10 @@ const App = () => {
               <Route path={URLRoutes.S_Tier} element={<STier />} />
               <Route path={URLRoutes.Home} element={<Home />} />
               <Route path={URLRoutes.ESPresence} element={<ESPresence />} />
+              <Route
+                path={URLRoutes.Battery_Status}
+                element={<BatteryStatus />}
+              />
               <Route
                 path={URLRoutes.GlobalContext}
                 element={<GlobalContext />}
