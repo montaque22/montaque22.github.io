@@ -8,20 +8,46 @@ import { ChildGuardAutomation } from "./pages/ChildGuard/childGuard";
 import { AIIntent } from "./pages/AI-Intent/aiIntent";
 import { GlobalContext } from "./pages/GlobalContext/globalContext";
 import { BatteryStatus } from "./pages/BatteryStatus/batteryStatus";
+import { GPTInspiredAutomations } from "./pages/GPTInspiredAutomations/gptInspiredAutomations";
 import classnames from "classnames";
 import logo from "./images/Chaperone-splash.png";
 import "./App.scss";
 
-enum URLRoutes {
-  Home = "/",
-  AI_MasterClass = "ai-master-class",
-  S_Tier = "stier",
-  ESPresence = "espresence",
-  ChildGuard = "childGuard",
-  GlobalContext = "globalContext",
-  AI_Intent = "aiIntent",
-  Battery_Status = "batteryStatus",
-}
+const URLRoutes = [
+  { Component: Home, route: "/", name: "Home" },
+  {
+    Component: AIMasterClass,
+    route: "ai-master-class",
+    name: "AI MasterClass",
+  },
+  {
+    Component: ESPresence,
+    route: "espresence",
+    name: "ESPresence Detection",
+  },
+  {
+    Component: STier,
+    route: "stier",
+    name: "Avoid this lame trigger and use this one instead",
+  },
+  {
+    Component: ChildGuardAutomation,
+    route: "childGuard",
+    name: "Child Guard Automations",
+  },
+  { Component: GlobalContext, route: "globalContext", name: "Global Context" },
+  { Component: AIIntent, route: "aiIntent", name: "How to use AI-Intent" },
+  {
+    Component: BatteryStatus,
+    route: "batteryStatus",
+    name: "Battery Status Automation",
+  },
+  {
+    Component: GPTInspiredAutomations,
+    route: "gptInspired",
+    name: "3 GPT-Inspired Automations",
+  },
+];
 
 // Create a condition that targets viewports at least 768px wide
 const mediaQuery = window.matchMedia("(min-width: 768px)");
@@ -66,79 +92,22 @@ const App = () => {
       <div className="app__container">
         <div className={`app__left-nav ${navClass}`}>
           <ul className="rounded border border-slate-600 bg-slate-700">
-            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link
-                to={URLRoutes.AI_MasterClass}
-                className="hover:text-rose-500"
-              >
-                AI Master Class Series
-              </Link>
-            </li>
-            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link to={URLRoutes.S_Tier} className="hover:text-rose-500">
-                Avoid this lame trigger and use this one instead
-              </Link>
-            </li>
-            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link to={URLRoutes.ESPresence} className="hover:text-rose-500">
-                ESPresence Automations
-              </Link>
-            </li>
-            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link to={URLRoutes.ChildGuard} className="hover:text-rose-500">
-                Child Guard Automation
-              </Link>
-            </li>
-            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link to={URLRoutes.AI_Intent} className="hover:text-rose-500">
-                AI Intent Plugin
-              </Link>
-            </li>
-            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link
-                to={URLRoutes.GlobalContext}
-                className="hover:text-rose-500"
-              >
-                Global Context
-              </Link>
-            </li>
-            <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link
-                to={URLRoutes.Battery_Status}
-                className="hover:text-rose-500"
-              >
-                Battery Status
-              </Link>
-            </li>
-            {/* <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
-              <Link to="/webhook-master-class">Webhook Master Class</Link>
-            </li> */}
+            {URLRoutes.map(({ name, route }) => (
+              <li className="w-full bg-slate-600 hover:bg-slate-500 active:bg-slate-800 border-b-s;-500">
+                <Link to={route} className="hover:text-rose-500">
+                  {name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className="app__right-nav content-center">
           <div className="max-w-7xl mx-auto">
             <Routes>
-              <Route
-                path={URLRoutes.AI_MasterClass}
-                element={<AIMasterClass />}
-              />
-              <Route path={URLRoutes.S_Tier} element={<STier />} />
-              <Route path={URLRoutes.Home} element={<Home />} />
-              <Route path={URLRoutes.ESPresence} element={<ESPresence />} />
-              <Route
-                path={URLRoutes.Battery_Status}
-                element={<BatteryStatus />}
-              />
-              <Route
-                path={URLRoutes.GlobalContext}
-                element={<GlobalContext />}
-              />
-              <Route path={URLRoutes.AI_Intent} element={<AIIntent />} />
-              <Route
-                path={URLRoutes.ChildGuard}
-                element={<ChildGuardAutomation />}
-              />
+              {URLRoutes.map(({ name, route, Component }) => {
+                return <Route path={route} Component={Component} key={name} />;
+              })}
             </Routes>
           </div>
         </div>
