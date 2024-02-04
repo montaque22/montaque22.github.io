@@ -5,6 +5,8 @@ import systemNodeExampleImg from "../../images/systemNodeExample.png";
 import callRegisterNodeExampleImg from "../../images/callRegisterNodeExample.png";
 import toolsNodeExampleImg from "../../images/toolsNodeExample.png";
 import userNodeExampleImg from "../../images/userNodeExample.png";
+import advanceToolsNodeExampleImg from "../../images/advanceTools.png";
+import { advanceToolsNode } from "./aiIntentJson";
 export const AIIntent = () => {
   const [systemNodeJSON, setSystemNodeJSON] = useState({});
   const [userNodeJSON, setUserNodeJSON] = useState({});
@@ -48,9 +50,7 @@ export const AIIntent = () => {
         over my house. If you want to learn more on how to use <b>AI-Intent</b>{" "}
         check out the video below.
       </Post.Body>
-
       <Youtube url="https://www.youtube.com/embed/J0_mi7U0wCM" />
-
       <Post.Body>
         You can find additional examples on how this plugin works by checking
         out the
@@ -62,14 +62,12 @@ export const AIIntent = () => {
           Github repo
         </a>
       </Post.Body>
-
       <Post.Section
         subTitle="User Node Example"
         summary={`User node is defines your interaction with GPT. These are the questions and commands you tell the LLM`}
         image={userNodeExampleImg}
         json={userNodeJSON}
       />
-
       <Post.Section
         subTitle="System Node Example"
         summary={`System node is responsible for defining the context (universe) for GPT to operate under.`}
@@ -84,6 +82,17 @@ export const AIIntent = () => {
         image={toolsNodeExampleImg}
         json={toolNodeJSON}
       />
+
+      <Youtube url="https://www.youtube.com/embed/SsHZHYIfn04" />
+
+      <Post.Section
+        subTitle="Advanced Usage for the Tool Node"
+        summary={`Learn more powerful techniques to help you create something unrivaled in the mainstream market`}
+        image={advanceToolsNodeExampleImg}
+        json={advanceToolsNode}
+      />
+
+      <Youtube url="https://www.youtube.com/embed/oWP8es4g4D0" />
       <Post.Section
         subTitle="Call/Register Node Example"
         summary={`Connects two automations/flows together. When combined with the other AI-Intent Nodes, it allows GPT
