@@ -38,7 +38,10 @@ export const GPTInspiredAutomations = () => {
       <Youtube url="https://www.youtube.com/embed/H38JbIAwQaE" />
       <Post.Section
         subTitle="4 levels "
-        summary={`Learn how to create the Event Summary automation. The JSON below are 4 levels seen in the video.`}
+        summary={`Learn how to create the Event Summary automation. The JSON below are 4 levels seen in the video. SPECIAL NOTE:
+        The Call Service node for the calendar events uses a deprecated method called "List Events". The method made it easy to demonstrate the
+        code. However you will need to use the "Get Events" service. This will also require an update to the Merge Events node as the payload
+        the Call Service returns will be slightly different.`}
         image={LevelSummaryImg}
         json={fourLevels}
       />
