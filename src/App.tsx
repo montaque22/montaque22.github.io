@@ -6,12 +6,14 @@ import { AIMasterClass } from "./pages/AI-MasterClass/AIMasterClass";
 import { ESPresence } from "./pages/ESPresence/ESPresence";
 import { ChildGuardAutomation } from "./pages/ChildGuard/childGuard";
 import { AIIntent } from "./pages/AI-Intent/aiIntent";
+
 import { GlobalContext } from "./pages/GlobalContext/globalContext";
 import { BatteryStatus } from "./pages/BatteryStatus/batteryStatus";
 import { GPTInspiredAutomations } from "./pages/GPTInspiredAutomations/gptInspiredAutomations";
 import classnames from "classnames";
 import logo from "./images/Chaperone-splash.png";
 import "./App.scss";
+import { Voicemail } from "./pages/Voicemail/voicemail";
 
 const URLRoutes = [
   { Component: Home, route: "/", name: "Home" },
@@ -46,6 +48,11 @@ const URLRoutes = [
     Component: GPTInspiredAutomations,
     route: "gptInspired",
     name: "3 GPT-Inspired Automations",
+  },
+  {
+    Component: Voicemail,
+    route: "voicemail",
+    name: "A Clever Todo List Automation",
   },
 ];
 
