@@ -12,6 +12,7 @@ import { GPTInspiredAutomations } from "./pages/GPTInspiredAutomations/gptInspir
 import classnames from "classnames";
 import logo from "./images/Chaperone-splash.png";
 import "./App.scss";
+import { Mailbox } from "./pages/Mailbox/mailbox";
 
 const URLRoutes = [
   { Component: Home, route: "/", name: "Home" },
@@ -46,6 +47,11 @@ const URLRoutes = [
     Component: GPTInspiredAutomations,
     route: "gptInspired",
     name: "3 GPT-Inspired Automations",
+  },
+  {
+    Component: Mailbox,
+    route: "mailbox",
+    name: "Mailbox Automation",
   },
 ];
 
