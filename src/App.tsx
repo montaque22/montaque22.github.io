@@ -10,10 +10,11 @@ import { AIIntent } from "./pages/AI-Intent/aiIntent";
 import { GlobalContext } from "./pages/GlobalContext/globalContext";
 import { BatteryStatus } from "./pages/BatteryStatus/batteryStatus";
 import { GPTInspiredAutomations } from "./pages/GPTInspiredAutomations/gptInspiredAutomations";
-import classnames from "classnames";
 import logo from "./images/Chaperone-splash.png";
-import "./App.scss";
+import { Mailbox } from "./pages/Mailbox/mailbox";
 import { Voicemail } from "./pages/Voicemail/voicemail";
+import classnames from "classnames";
+import "./App.scss";
 
 const URLRoutes = [
   { Component: Home, route: "/", name: "Home" },
@@ -48,6 +49,11 @@ const URLRoutes = [
     Component: GPTInspiredAutomations,
     route: "gptInspired",
     name: "3 GPT-Inspired Automations",
+  },
+  {
+    Component: Mailbox,
+    route: "mailbox",
+    name: "Mailbox Automation",
   },
   {
     Component: Voicemail,
